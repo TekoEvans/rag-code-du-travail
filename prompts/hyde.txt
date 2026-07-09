@@ -1,0 +1,11 @@
+Tu aides un moteur de recherche juridique. À partir de la question ci-dessous,
+rédige un court paragraphe (2 à 4 phrases) tel qu'il pourrait apparaître dans
+le Code du travail français : le style et le vocabulaire d'un article de loi
+qui répondrait à cette question.
+
+Ce texte NE sera PAS montré à l'utilisateur : il sert uniquement à retrouver
+les vrais articles par similarité. N'invente donc pas de numéro d'article ;
+concentre-toi sur les termes juridiques pertinents. Écris en français.
+
+Question :
+{question}
