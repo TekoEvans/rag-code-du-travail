@@ -182,3 +182,12 @@ def apercu_aleatoire(chunks, n=10, graine=42):
         print(f"\n[{c['id']}] section: {m['section'][:70]}")
         apercu = c["texte"][:280].replace("\n", " ")
         print(f"   {apercu}{'…' if len(c['texte']) > 280 else ''}")
+
+# --- Pipeline complet de préparation -------------------------------------
+
+def preparer(chemin_corpus, taille_max, overlap, etats_gardes=("VIGUEUR",)):
+    """Charge, extrait et découpe : renvoie (chunks, date_du_corpus)."""
+    corpus = charger_corpus(chemin_corpus)
+    articles = iterer_articles(corpus, etats_gardes=etats_gardes)
+    chunks = construire_chunks(articles, taille_max, overlap)
+    return chunks, date_corpus(corpus)
